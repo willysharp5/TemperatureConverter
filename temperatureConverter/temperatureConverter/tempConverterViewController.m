@@ -29,6 +29,9 @@
 {
     [super viewDidLoad];
     
+    //Set delegate to textfield to allow onDoneEditing text to show
+    self.tempEntryTextField.delegate = self;
+    
     //Automatically calculate data when UISegment is pressed
     [self.tempChooserSegmentedControl addTarget:self action:@selector(updateValues) forControlEvents:UIControlEventValueChanged];
     
